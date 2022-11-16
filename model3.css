@@ -1,0 +1,175 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: rgb(0, 0, 0);
+  font-family: "M PLUS 1p", sans-serif;
+}
+
+header {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  padding: 5px 20px;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  width: 100%;
+}
+a.logo {
+  height: 12px;
+  width: 100px;
+  color: inherit;
+}
+
+a {
+  color: inherit;
+}
+
+header nav a {
+  text-decoration: none;
+  padding: 5px 10px;
+}
+
+.center {
+  text-align: center;
+}
+
+.desktop {
+  display: none;
+}
+
+@media (min-width: 1200px) {
+  .desktop {
+    display: initial;
+  }
+}
+
+header nav.right {
+  text-align: right;
+}
+
+aside {
+  position: fixed;
+  right: -320px;
+  width: 320px;
+  background-color: #fff;
+  padding: 80px 40px;
+  z-index: 4;
+  height: 100vh;
+  transition: right 0.4s ease;
+}
+
+aside.active {
+  right: 0;
+}
+
+aside a {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  padding: 5px 0;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.close {
+  font-size: 24px;
+  border: 0;
+  background-color: transparent;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 10px;
+  font-family: sans-serif;
+  font-weight: 100;
+  cursor: pointer;
+}
+
+.backDrop {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(5px);
+}
+
+.backDrop.active {
+  display: block;
+}
+
+section {
+  height: 100vh;
+  background-size: cover;
+  background-position: center center;
+}
+
+.heroSection {
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  display: flex;
+  padding: 17vh 0;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.heroContent {
+  display: flex;
+  justify-content: center;
+  margin-top: 250px;
+}
+
+section h1 {
+  font-size: xx-large;
+}
+.upper {
+  display: flex;
+  align-items: center;
+  height: 50px;
+}
+.upper .img {
+  width: 36px;
+  margin-right: 10px;
+}
+
+.upper .img img {
+  width: 100%;
+}
+.upper .right p {
+  font-size: 32px;
+  font-weight: 500;
+}
+.down p {
+  font-size: small;
+}
+.badge {
+  margin: 30px;
+}
+.upper a {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 5px 60px;
+  border: 2px solid white;
+}
+.safety {
+  display: flex;
+    
+}
+.left {
+  width: 50%;
+  height: 100px;
+  border: 1px solid red;
+}
+.safety.right {
+  height: 100px;
+  width: 50%;
+  border: 1px solid blue;
+}
